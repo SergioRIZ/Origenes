@@ -1,0 +1,7 @@
+Entidades: "User" "Trip" "Itinerary" "Expense" "CheckListItem" "TripMember"
+Campo User: id(number), name(string), surname(string), email(string), telephone(string), dni((string)optional), status(string), created_at(date).
+Campo Trip: id(number), user_id(number), adults(number), kids(number), pets(number), country(string), location(string), title(string), start_date(date), end_date(date), created_at(date).
+Campo Itinerary: id(number), trip_id(number), activity(string), location(string), date(date), start_time(time), end_time(optional(time)), created_at(date). 
+Campo expense: id(number), trip_id(number), concept(string), amount(number), category(string), date(date), created_at(date).
+Campo CheckListItem: id(number), trip_id(number), item_name(string), priority(number), completed(boolean), created_at(date).
+Campo TripMember: user_id(number), trip_id(number), created_at(date).
