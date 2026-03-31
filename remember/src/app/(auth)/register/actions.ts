@@ -8,20 +8,17 @@ export async function register (formData: FormData) {
 const server = await createClient()
 
 const email = formData.get("email");
-const user = formData.get("user");
+const name = formData.get("name");
 const password = formData.get("password");
-const rpassword = formData.get("rpassword");
 
 const {data, error} = await server.auth.signUp({
     email: email as string,
-    password: password as string
+    password: password as string,
+    options: {data: {name: name as string} }
 })
-
 if (error) {
     redirect("/error")
 } else {
     redirect("/dashboard")
 }
-
-
 }

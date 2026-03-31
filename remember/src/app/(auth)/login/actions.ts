@@ -18,6 +18,6 @@ export async function login (formData: FormData) {
     if(error) {
         redirect('/error')
     } else {
-        redirect('dashboard')
+        redirect('/dashboard')
     }
 }

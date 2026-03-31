@@ -25,11 +25,11 @@ return(
             </section>
             <section>
                 <label htmlFor="kids">Kids</label>
-                <input type="text" id="kids" name="kids"/>
+                <input type="number" id="kids" name="kids"/>
             </section>
             <section>
                 <label htmlFor="pets">Pets</label>
-                <input type="text" id="pets" name="pets"/>
+                <input type="number" id="pets" name="pets"/>
             </section>
             <section>
                 <label htmlFor="start_date">Start Date</label>
@@ -39,6 +39,7 @@ return(
                 <label htmlFor="end_date">End Date</label>
                 <input type="date" id="end_date" name="end_date"/>
             </section>
+            <button type="submit">Create Trip</button>
             </form>
         </div>
     </main>

@@ -8,8 +8,8 @@ export default function RegisterForm ()  {
         <main className="">
             <div className="">
             <form autoComplete="on" action={register} className="">
-                    <label htmlFor="user">User:</label>
-                    <input type="text" id="user" name="user"/>
+                    <label htmlFor="name">User:</label>
+                    <input type="text" id="name" name="name"/>
                     <label htmlFor="email">Email:</label>
                     <input type="email" id="email" name="email"/>
                     <label htmlFor="pass">Password:</label>
