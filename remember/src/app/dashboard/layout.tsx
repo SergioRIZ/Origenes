@@ -1,4 +1,5 @@
 import Link from "next/link"
+import {logout} from "./actions"
 
 export default function DashboardLay ({children}: {children: React.ReactNode}) {
     return (
@@ -12,6 +13,9 @@ export default function DashboardLay ({children}: {children: React.ReactNode}) {
             <Link href="/dashboard/config">Configuracion</Link>
             </div>
         </header>
+        <form action={logout}>
+        <button type="submit">Cerrar sesion</button>
+        </form>
         <section>{children}</section>
         </main>
     )

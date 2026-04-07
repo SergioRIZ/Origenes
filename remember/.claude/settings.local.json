@@ -9,7 +9,13 @@
       "mcp__chrome-devtools__click",
       "mcp__chrome-devtools__list_console_messages",
       "mcp__claude_ai_Supabase__list_tables",
-      "mcp__claude_ai_Supabase__execute_sql"
+      "mcp__claude_ai_Supabase__execute_sql",
+      "Bash(rm -rf src/app/api/auth src/app/api/places src/app/api/trips)",
+      "Bash(rmdir src/app/api)",
+      "Bash(rm src/app/info.txt)",
+      "Bash(mkdir -p src/app/dashboard/profile)",
+      "Bash(mkdir -p src/app/dashboard/config)",
+      "mcp__chrome-devtools__fill"
     ]
   }
 }

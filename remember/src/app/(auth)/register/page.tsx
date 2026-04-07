@@ -1,7 +1,16 @@
+import { redirect } from "next/navigation";
 import { register } from "./actions";
+import { createClient } from "@/lib/supabase/server";
 
+export default async function RegisterForm ()  {
 
-export default function RegisterForm ()  {
+    const server = await createClient()
+
+    const {data} = await server.auth.getUser()
+
+    if(data.user) {
+        redirect("/dashboard")
+    }
 
     return (
 

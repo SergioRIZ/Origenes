@@ -1,7 +1,16 @@
 import { login } from "./actions"
+import { createClient } from "@/lib/supabase/server"
+import { redirect } from "next/navigation"
 
+export default async function LoginForm () {
 
-export default function LoginForm () {
+        const server = await createClient()
+    
+        const {data} = await server.auth.getUser()
+    
+        if(data.user) {
+            redirect("/dashboard")
+        }
 
     return(
         <main className="">

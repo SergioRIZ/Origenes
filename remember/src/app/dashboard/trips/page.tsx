@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import Link from "next/link";
 
 export default async function TripsPage() {
 
@@ -22,6 +23,7 @@ return (
             <p>Mascotas: {trip.pets}</p>
             <p>Comienzo de viaje: {trip.start_date}</p>
             <p>Final de viaje: {trip.end_date}</p>
+            <Link href={`/dashboard/trips/${trip.id}`}>Ver viaje</Link>
         </div>
         ))}
 
